@@ -1,0 +1,353 @@
+:root{
+    --asali-color : #EC620C;
+    --navy-color : #141B34;
+    --dark-navy-color : #090E23;
+    --navy-color2:  #090E2380;
+}
+
+::-webkit-scrollbar{
+    background-color: transparent;
+    /* var(--navy-color); */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--navy-color2);
+    border-radius: 10px;
+}
+
+body{
+    font-family: 'Vazir';
+}
+
+.text-asali{
+    color: var(--asali-color)!important;
+}
+
+
+.bg-navy{
+    background-color: var(--navy-color);
+}
+
+.bg-dark-navy{
+    background-color: var(--dark-navy-color);
+}
+
+.bg-asali{
+    background-color: var(--asali-color);
+}
+
+.btn-asali{
+    background: linear-gradient( #F66B15 , #D0540F);
+    color: #fff;
+    white-space: nowrap;
+}
+
+.btn-asali:hover{
+    background: linear-gradient( #FF2B00 , #FF2B00);
+    color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* start nav  */
+.main-nav a{
+    color: white;
+    position: relative;
+}
+
+.main-nav a:not(.btn):hover::after{
+    content: '';
+    background-color: var(--asali-color);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    right: 0;
+}
+.main-nav a:hover{
+    color: white;
+}
+
+.divider{
+    border-left: 1px dashed #858E96;
+    height: 20px;
+}
+/* end nav  */
+
+/* start header  */
+.img-over-left{
+    left: 0;
+    z-index: -1;
+    width: 400px;
+    opacity: .8;
+}
+
+@media (max-width: 575.98px) {
+    .img-over-left{
+        width: 300px;
+    }
+}
+
+.img-over-right{
+    right: 0;
+    z-index: -1;
+    opacity: .8;
+}
+
+.card-service{
+    border-radius: 60px;
+    cursor: pointer;
+    height: 100%;
+}
+/* end header  */
+
+/* start services */
+.service-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.service-icon span{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #3F4A73;
+}
+
+
+.card-service:hover .service-icon span i{
+    color: var(--asali-color)!important;
+}
+
+.card-service:hover .service-icon span{
+    border-color: var(--asali-color)!important;
+}
+
+/* end services */
+
+/* start new cars  */
+.more-btn:hover{
+    color: var(--asali-color)!important;
+}
+
+.newcar-body{
+    border-radius: 50px 50px 0 50px;
+    padding-top: 60px!important;
+    border-right: 2px solid transparent;
+    transition-duration: .3s;
+}
+
+.newcar-list svg{
+    color: #858E96;
+}
+
+.newcar-footer{
+    border-radius: 50px 0 50px 50px;
+    border-right: 2px solid transparent;
+    transition-duration: .3s;
+}
+
+.newcar-icon{
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    transition-duration: .3s;
+}
+
+.newcar-icon span{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #3F4A73;
+    transition-duration: .3s;
+}
+
+.card-newcar:hover .newcar-icon span i{
+    color: var(--asali-color)!important;
+}
+
+.card-newcar:hover .newcar-icon span{
+    border-color: var(--asali-color)!important;
+}
+
+.newcar-header{
+    width: 80%;
+}
+
+.newcar-header img{
+    margin-top: -15px;
+}
+
+.newcar-header{
+    border-right: 2px solid var(--asali-color);
+}
+
+.card-newcar{
+    margin-top: 100px;
+}
+
+.card-newcar:hover .newcar-body{
+    border-right: 2px solid var(--asali-color);
+}
+
+.card-newcar:hover .newcar-footer{
+    border-right: 2px solid var(--asali-color);
+}
+/* end new cars  */
+
+/* start pricing */
+.pricing-box{
+/* start pricing */
+    background-color: var(--navy-color2);
+    border-radius: 40px;
+}
+
+.pricing-img{
+    filter: blur(10px);
+    opacity: .5;
+}
+
+.pricing-box::after{
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    right: -180px;
+    top: 70px;
+    z-index: -1;
+    background: radial-gradient(38.19% 28.33% at 50% 50%, #ED630D 0%, #733112 48.44%, #141B34 92.1%);
+    transform: rotate(-33.88deg);
+    opacity: .7;
+}
+
+.pricing-container{
+    z-index: -5;
+    background:linear-gradient(150deg, transparent 80%, var(--asali-color)) ;
+    padding: 5px;
+    border-radius: 40px;
+    backdrop-filter: opacity(0);
+}
+
+.pricing-container:hover{
+    cursor: pointer;
+}
+
+.pricing-container:hover h5{
+    color: var(--asali-color);
+}
+
+.pricing-container:hover .pricing-img{
+    filter: blur(0);
+    opacity: .6;
+}
+
+.pricing-container:hover .pricing-box::after{
+    opacity: 1;
+}
+
+@media (max-width: 575.98px) {
+    .pricing-box::after{
+    right: -250px;
+    top: 150px;
+    }
+
+    .pricing-img{
+        bottom: 60px!important;
+    }
+}
+/* end pricing */
+
+/* start brands */
+.brand-item{
+    border-radius: 25px;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    cursor: pointer;
+}
+
+.brand-item.active{
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 120px;
+    max-height: 120px;
+
+    background: linear-gradient(180deg, #0E142C 24.44%, #542E25 89.88%);
+    border: 1px solid var(--asali-color);
+}
+
+.brand-item.active span{
+    color: white!important;
+}
+
+.brand-item img{
+    filter: grayscale(100%) brightness(60%);
+}
+
+.brand-item.active img{
+    filter: grayscale(0) brightness(100%);
+}
+
+.brand-item:hover span{
+    color: white!important;
+}
+
+.brand-item:hover img{
+    filter: grayscale(0) brightness(100%);
+}
+
+.brand-items{
+    scrollbar-color:  var(--navy-color) transparent;
+}
+
+/* end brands */
+
+/* start comment */
+.comment-img img{
+    border-color: var(--navy-color)!important;
+    top: -2px;
+    left: -2px;
+}
+
+.comment-img{
+    width: 70px;
+    height: 70px;
+}
+
+.comment-slider .carousel-item:hover .member-name{
+    color: var(--asali-color)!important;
+}
+
+.carousel-control-custom {
+    width: 55px;
+    height: 55px;
+}
+/* end comment */
+
+
+.footer-img{
+    background: linear-gradient(transparent , var(--asali-color));
+    height: 60px;
+    width: 250px;
+    margin-top: -50px;
+}
+
+.footer-img>div{
+    top: -2px;
+}
+
+.footer-icons a:hover path{
+    fill: var(--asali-color)!important;
+}
